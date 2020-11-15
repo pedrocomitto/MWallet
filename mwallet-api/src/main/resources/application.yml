@@ -1,0 +1,20 @@
+spring:
+  redis:
+    host: 0.0.0.0
+    port: 6379
+    password: mwallet
+  cache:
+    type: redis
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/mwallet
+    username: mwallet
+    password: mwallet
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+
+finance-api:
+  plan: free
+  url: api.hgbrasil.com/finance

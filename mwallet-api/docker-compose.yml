@@ -1,0 +1,22 @@
+version: "3"
+services:
+  mwallet-db:
+    image: postgres:9.6
+    container_name: "mwallet"
+    restart: always
+    environment:
+      - POSTGRES_DB=mwallet
+      - POSTGRES_USER=mwallet
+      - POSTGRES_PASSWORD=mwallet
+      - TZ=GMT
+    volumes:
+#      - "mwallet-db-data:/var/lib/postgresql/data"
+      - "./data/postgres:/var/lib/postgresql/data"
+    ports:
+      - 5432:5432
+
+  redis:
+    image: redis
+    command: redis-server --requirepass mwallet
+    ports:
+      - "6379:6379"
