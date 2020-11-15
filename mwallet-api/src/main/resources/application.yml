@@ -18,3 +18,4 @@ spring:
 finance-api:
   plan: free
   url: api.hgbrasil.com/finance
+  key: e73c6da0
