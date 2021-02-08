@@ -19,7 +19,7 @@ fun RecordEntity.toResponse() =
     RecordResponse(
         id = id,
         financialOperation = financialOperation,
-        asset = asset.toResponse(),
+        asset = asset.ticker,
         quantity = quantity,
         price = price,
         date = date,

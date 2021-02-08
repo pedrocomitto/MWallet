@@ -10,7 +10,7 @@ data class RecordResponse(
 
     val financialOperation: FinancialOperationEnum,
 
-    val asset: AssetResponse,
+    val asset: String,
 
     val quantity: Int,
 
