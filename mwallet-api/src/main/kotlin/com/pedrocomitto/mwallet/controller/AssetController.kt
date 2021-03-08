@@ -32,7 +32,7 @@ class AssetController(
         @RequestParam(required = false) country: CountryEnum?,
         @RequestParam(required = false, defaultValue = "true") active: Boolean
     ) =
-        assetService.findAll(ticker, broker, category, country, active).also { println("entrei no metodo") }
+        assetService.findAll(ticker, broker, category, country, active)
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
